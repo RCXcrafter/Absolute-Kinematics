@@ -1,0 +1,316 @@
+{
+  "variants": {
+    "assembled=false,axis=x,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 180
+    },
+    "assembled=false,axis=x,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 180
+    },
+    "assembled=false,axis=x,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=x,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=x,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90
+    },
+    "assembled=false,axis=x,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90
+    },
+    "assembled=false,axis=x,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=x,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=x,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x"
+    },
+    "assembled=false,axis=x,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x"
+    },
+    "assembled=false,axis=x,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,axis=x,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,axis=y,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 180
+    },
+    "assembled=false,axis=y,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 180
+    },
+    "assembled=false,axis=y,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=y,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=y,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90
+    },
+    "assembled=false,axis=y,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90
+    },
+    "assembled=false,axis=y,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=y,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=y,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z"
+    },
+    "assembled=false,axis=y,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z"
+    },
+    "assembled=false,axis=y,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,axis=y,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,axis=z,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 180
+    },
+    "assembled=false,axis=z,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z",
+      "x": 180
+    },
+    "assembled=false,axis=z,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=z,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,axis=z,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90
+    },
+    "assembled=false,axis=z,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90
+    },
+    "assembled=false,axis=z,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=z,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,axis=z,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_z"
+    },
+    "assembled=false,axis=z,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_z"
+    },
+    "assembled=false,axis=z,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,axis=z,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=x,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 180
+    },
+    "assembled=true,axis=x,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 180
+    },
+    "assembled=true,axis=x,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=x,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=x,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90
+    },
+    "assembled=true,axis=x,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90
+    },
+    "assembled=true,axis=x,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=x,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=x,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x"
+    },
+    "assembled=true,axis=x,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x"
+    },
+    "assembled=true,axis=x,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=x,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=y,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 180
+    },
+    "assembled=true,axis=y,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 180
+    },
+    "assembled=true,axis=y,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=y,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=y,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90
+    },
+    "assembled=true,axis=y,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90
+    },
+    "assembled=true,axis=y,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=y,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=y,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z"
+    },
+    "assembled=true,axis=y,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z"
+    },
+    "assembled=true,axis=y,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=y,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=z,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 180
+    },
+    "assembled=true,axis=z,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z",
+      "x": 180
+    },
+    "assembled=true,axis=z,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=z,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,axis=z,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90
+    },
+    "assembled=true,axis=z,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90
+    },
+    "assembled=true,axis=z,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=z,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,axis=z,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_z"
+    },
+    "assembled=true,axis=z,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_z"
+    },
+    "assembled=true,axis=z,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,axis=z,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/hinge_base_x",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

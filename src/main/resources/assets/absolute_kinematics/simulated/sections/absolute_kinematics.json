@@ -1,0 +1,11 @@
+{
+  "priority": 999999,
+  "title": {
+    "text": { "translate": "simulated.simulated_section.absolute_kinematics" },
+    "background": "#AA3A3A3A",
+    "color": "#ffffffff",
+    "secondary_color": "#FFD1D1D1"
+  },
+  "sprite": "absolute_kinematics:absolute_kinematics_banner",
+  "only_animate_on_hover": true
+}

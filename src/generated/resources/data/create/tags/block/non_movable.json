@@ -1,0 +1,8 @@
+{
+  "values": [
+    "absolute_kinematics:hinge",
+    "absolute_kinematics:hinge_leaf",
+    "absolute_kinematics:ball_joint",
+    "absolute_kinematics:ball_joint_plate"
+  ]
+}

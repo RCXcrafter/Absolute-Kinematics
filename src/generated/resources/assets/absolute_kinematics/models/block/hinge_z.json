@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:block/block",
+  "children": {
+    "base": {
+      "parent": "absolute_kinematics:block/hinge_base_z"
+    },
+    "leaf": {
+      "parent": "absolute_kinematics:block/hinge_leaf_z"
+    }
+  },
+  "item_render_order": [
+    "base",
+    "leaf"
+  ],
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "absolute_kinematics:block/hinge_side"
+  }
+}

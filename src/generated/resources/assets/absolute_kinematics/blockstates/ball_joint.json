@@ -1,0 +1,108 @@
+{
+  "variants": {
+    "assembled=false,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 180
+    },
+    "assembled=false,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 180
+    },
+    "assembled=false,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=false,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90
+    },
+    "assembled=false,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90
+    },
+    "assembled=false,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=false,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint"
+    },
+    "assembled=false,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint"
+    },
+    "assembled=false,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=false,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,facing=down,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 180
+    },
+    "assembled=true,facing=down,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 180
+    },
+    "assembled=true,facing=east,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,facing=east,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 90
+    },
+    "assembled=true,facing=north,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90
+    },
+    "assembled=true,facing=north,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90
+    },
+    "assembled=true,facing=south,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,facing=south,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 180
+    },
+    "assembled=true,facing=up,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket"
+    },
+    "assembled=true,facing=up,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket"
+    },
+    "assembled=true,facing=west,powered=false": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 270
+    },
+    "assembled=true,facing=west,powered=true": {
+      "model": "absolute_kinematics:block/ball_joint_socket",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

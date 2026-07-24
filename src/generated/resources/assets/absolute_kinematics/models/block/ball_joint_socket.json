@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "flip_v": true,
+  "loader": "neoforge:obj",
+  "model": "absolute_kinematics:models/block/ball_joint_socket.obj",
+  "textures": {
+    "particle": "absolute_kinematics:block/ball_joint_side",
+    "side": "absolute_kinematics:block/ball_joint_side",
+    "socket_side": "absolute_kinematics:block/ball_joint_socket_side",
+    "socket_top": "absolute_kinematics:block/ball_joint_socket_top"
+  }
+}

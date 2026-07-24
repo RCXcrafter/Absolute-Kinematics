@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "absolute_kinematics:block/ball_joint_ball",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "absolute_kinematics:block/ball_joint_ball",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "absolute_kinematics:block/ball_joint_ball",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "absolute_kinematics:block/ball_joint_ball",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "absolute_kinematics:block/ball_joint_ball"
+    },
+    "facing=west": {
+      "model": "absolute_kinematics:block/ball_joint_ball",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

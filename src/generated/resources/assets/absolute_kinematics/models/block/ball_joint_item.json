@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:block/block",
+  "children": {
+    "ball": {
+      "parent": "absolute_kinematics:block/ball_joint_ball"
+    },
+    "shaft": {
+      "parent": "absolute_kinematics:block/through_shaft"
+    },
+    "socket": {
+      "parent": "absolute_kinematics:block/ball_joint_socket"
+    }
+  },
+  "item_render_order": [
+    "socket",
+    "ball",
+    "shaft"
+  ],
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "absolute_kinematics:block/ball_joint_side"
+  }
+}

@@ -1,0 +1,8 @@
+# Made in Blockbench 5.1.4
+newmtl m_dd9f5db8-5465-8c51-a5bc-f42c9da522b0
+map_Kd #socket_side
+newmtl m_f45105f2-9f3d-0529-c657-da1fab28cfe5
+map_Kd #socket_top
+newmtl m_203370ef-8c1e-313d-799d-918241ed41c0
+map_Kd #side
+newmtl none

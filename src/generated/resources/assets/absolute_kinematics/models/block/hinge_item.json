@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:block/block",
+  "children": {
+    "base": {
+      "parent": "absolute_kinematics:block/hinge_base_x"
+    },
+    "cardan_bottom": {
+      "parent": "absolute_kinematics:block/cardan_bottom"
+    },
+    "cardan_middle": {
+      "parent": "absolute_kinematics:block/cardan_middle"
+    },
+    "cardan_top": {
+      "parent": "absolute_kinematics:block/cardan_top"
+    },
+    "leaf": {
+      "parent": "absolute_kinematics:block/hinge_leaf_x"
+    },
+    "side_shaft": {
+      "parent": "absolute_kinematics:block/hinge_axle"
+    },
+    "through_shaft": {
+      "parent": "absolute_kinematics:block/through_shaft"
+    }
+  },
+  "item_render_order": [
+    "base",
+    "leaf",
+    "through_shaft",
+    "side_shaft",
+    "cardan_bottom",
+    "cardan_middle",
+    "cardan_top"
+  ],
+  "loader": "neoforge:composite",
+  "textures": {
+    "particle": "absolute_kinematics:block/hinge_side"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "variants": {
+    "axis=x,facing=down": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 180
+    },
+    "axis=x,facing=east": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,facing=north": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90
+    },
+    "axis=x,facing=south": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 180
+    },
+    "axis=x,facing=up": {
+      "model": "absolute_kinematics:block/hinge_leaf_x"
+    },
+    "axis=x,facing=west": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 270
+    },
+    "axis=y,facing=down": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 180
+    },
+    "axis=y,facing=east": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,facing=north": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 90
+    },
+    "axis=y,facing=south": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 90,
+      "y": 180
+    },
+    "axis=y,facing=up": {
+      "model": "absolute_kinematics:block/hinge_leaf_z"
+    },
+    "axis=y,facing=west": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 90,
+      "y": 270
+    },
+    "axis=z,facing=down": {
+      "model": "absolute_kinematics:block/hinge_leaf_z",
+      "x": 180
+    },
+    "axis=z,facing=east": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z,facing=north": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90
+    },
+    "axis=z,facing=south": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 180
+    },
+    "axis=z,facing=up": {
+      "model": "absolute_kinematics:block/hinge_leaf_z"
+    },
+    "axis=z,facing=west": {
+      "model": "absolute_kinematics:block/hinge_leaf_x",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

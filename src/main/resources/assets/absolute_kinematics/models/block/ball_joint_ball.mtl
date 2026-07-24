@@ -1,0 +1,10 @@
+# Made in Blockbench 5.1.4
+newmtl m_203370ef-8c1e-313d-799d-918241ed41c0
+map_Kd #side
+newmtl m_50b1ffca-ac46-d9d3-783d-5303afa776b4
+map_Kd #top
+newmtl m_8cd855f3-e10d-d660-b2f6-21e7031aa4e2
+map_Kd #bottom
+newmtl m_15612807-0763-60d5-eb09-383031e1c00d
+map_Kd #ball
+newmtl none

@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "absolute_kinematics:blocks/ball_joint_plate"
+}
