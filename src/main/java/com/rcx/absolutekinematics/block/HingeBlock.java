@@ -4,10 +4,12 @@ import com.rcx.absolutekinematics.KinematicsRegistry;
 import com.rcx.absolutekinematics.Util;
 import com.rcx.absolutekinematics.blockentity.HingeBlockEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import com.simibubi.create.content.kinetics.base.DirectionalKineticBlock;
 import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 
 import dev.simulated_team.simulated.util.extra_kinetics.ExtraKinetics;
+import net.createmod.catnip.math.VoxelShaper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
@@ -99,6 +101,28 @@ public class HingeBlock extends BaseJointBlock<HingeBlockEntity> implements Extr
 			IWrenchable.playRotateSound(level, pos);
 
 		return InteractionResult.SUCCESS;
+	}
+
+	@Override
+	public BlockState getRotatedBlockState(BlockState originalState, Direction targetedFace) {
+		if (targetedFace.getAxis() == originalState.getValue(BlockStateProperties.FACING).getAxis())
+			return originalState.setValue(BlockStateProperties.AXIS,
+					VoxelShaper
+					.axisAsFace(originalState.getValue(BlockStateProperties.AXIS))
+					.getClockWise(targetedFace.getAxis())
+					.getAxis());
+
+		if (targetedFace.getAxis() == originalState.getValue(BlockStateProperties.AXIS))
+			return originalState.setValue(DirectionalKineticBlock.FACING,
+					originalState.getValue(DirectionalKineticBlock.FACING).getClockWise(targetedFace.getAxis()));
+
+		return originalState.setValue(DirectionalKineticBlock.FACING,
+				originalState.getValue(DirectionalKineticBlock.FACING).getClockWise(targetedFace.getAxis())).
+				setValue(BlockStateProperties.AXIS,
+						VoxelShaper
+						.axisAsFace(originalState.getValue(BlockStateProperties.AXIS))
+						.getClockWise(targetedFace.getAxis())
+						.getAxis());
 	}
 
 	@Override
