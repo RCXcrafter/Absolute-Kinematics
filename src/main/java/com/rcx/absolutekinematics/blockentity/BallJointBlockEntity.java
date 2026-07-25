@@ -183,12 +183,23 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 
 	public FixedConstraintHandle addLockConstraint(ServerSubLevel container, ServerSubLevel subLevel) {
 		final PhysicsPipeline pipeline = SubLevelContainer.getContainer((ServerLevel) this.getLevel()).physicsSystem().getPipeline();
-
-		final FixedConstraintHandle handle = pipeline.addConstraint(container, subLevel, new FixedConstraintConfiguration(
-				JOMLConversion.toJOML(this.getBlockPos().getCenter()),
-				JOMLConversion.toJOML(this.getPlatePos().getCenter()),
-				subLevel == null ? container.logicalPose().orientation() : subLevel.logicalPose().orientation()
-				));
+		FixedConstraintHandle handle;
+		//special case if the plate is in the main level
+		if (subLevel == null) {
+			if (container == null)
+				return null; //???
+			handle = pipeline.addConstraint(subLevel, container, new FixedConstraintConfiguration(
+					JOMLConversion.toJOML(this.getPlatePos().getCenter()),
+					JOMLConversion.toJOML(this.getBlockPos().getCenter()),
+					container.logicalPose().orientation()
+					));
+		} else {
+			handle = pipeline.addConstraint(container, subLevel, new FixedConstraintConfiguration(
+					JOMLConversion.toJOML(this.getBlockPos().getCenter()),
+					JOMLConversion.toJOML(this.getPlatePos().getCenter()),
+					container == null ? subLevel.logicalPose().orientation() : container.logicalPose().orientation().difference(subLevel.logicalPose().orientation())
+					));
+		}
 		return handle;
 	}
 
@@ -250,6 +261,16 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 		if (this.lockHandle == null && this.jointPlatePos != null && this.isAssembled() && this.isLocking()) {
 			this.lockHandle = addLockConstraint((ServerSubLevel) Sable.HELPER.getContaining(this), (ServerSubLevel) subLevel);
 		}
+	}
+
+	@Override
+	public void reattachConstraint(final @Nullable ServerSubLevel plateSubLevel, final boolean updatePlate) {
+		if (this.getPlatePos() != null) {
+			if (this.lockHandle != null) {
+				this.lockHandle.remove();
+			}
+		}
+		super.reattachConstraint(plateSubLevel, updatePlate);
 	}
 
 	@Override
