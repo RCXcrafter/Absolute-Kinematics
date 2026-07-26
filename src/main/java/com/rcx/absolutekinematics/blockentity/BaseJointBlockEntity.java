@@ -345,6 +345,11 @@ public abstract class BaseJointBlockEntity extends KineticBlockEntity implements
 
 		if (containingSubLevel == plateSubLevel) return;
 		this.handle = pipeline.addConstraint(containingSubLevel, plateSubLevel, constraint);
+		this.attachAdditionalConstraints(containingSubLevel, plateSubLevel, anchorPos, attachPos);
+	}
+
+	void attachAdditionalConstraints(@Nullable ServerSubLevel containingSubLevel, @Nullable ServerSubLevel plateSubLevel, Vector3d anchorPos, Vector3d attachPos) {
+
 	}
 
 	abstract Quaterniond getBaseRotationAxis(BlockState state);

@@ -2,7 +2,6 @@ package com.rcx.absolutekinematics.blockentity;
 
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 import java.util.function.BiPredicate;
 
 import org.jetbrains.annotations.Nullable;
@@ -15,20 +14,17 @@ import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour
 import com.simibubi.create.foundation.blockEntity.behaviour.CenteredSideValueBoxTransform;
 import com.simibubi.create.foundation.blockEntity.behaviour.scrollValue.ScrollOptionBehaviour;
 
-import dev.ryanhcode.sable.Sable;
 import dev.ryanhcode.sable.api.physics.PhysicsPipeline;
 import dev.ryanhcode.sable.api.physics.constraint.ConstraintJointAxis;
 import dev.ryanhcode.sable.api.physics.constraint.FixedConstraintConfiguration;
 import dev.ryanhcode.sable.api.physics.constraint.FixedConstraintHandle;
 import dev.ryanhcode.sable.api.sublevel.SubLevelContainer;
-import dev.ryanhcode.sable.companion.math.JOMLConversion;
 import dev.ryanhcode.sable.sublevel.ServerSubLevel;
 import dev.ryanhcode.sable.sublevel.SubLevel;
 import dev.ryanhcode.sable.sublevel.system.SubLevelPhysicsSystem;
 import dev.simulated_team.simulated.config.server.physics.SimPhysics;
 import dev.simulated_team.simulated.content.blocks.swivel_bearing.SwivelBearingBlockEntity.LockingSetting;
 import dev.simulated_team.simulated.service.SimConfigService;
-import dev.simulated_team.simulated.util.SimLevelUtil;
 import net.createmod.catnip.math.VecHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -124,10 +120,6 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 			/*if (attached != null && this.getPlatePos() != null) {
 				this.setTargetAngleFromCurrentOrientation();
 			}*/
-
-			if (this.isAssembled()) {
-				this.lockHandle = addLockConstraint((ServerSubLevel) Sable.HELPER.getContaining(this), attached);
-			}
 		} else if (!shouldLock && this.isLocking()) {
 			this.level.setBlockAndUpdate(this.getBlockPos(), this.getBlockState().setValue(BlockStateProperties.POWERED, false));
 			removeLock();
@@ -181,7 +173,7 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 		}
 	}
 
-	public FixedConstraintHandle addLockConstraint(ServerSubLevel container, ServerSubLevel subLevel) {
+	public FixedConstraintHandle addLockConstraint(ServerSubLevel container, ServerSubLevel subLevel, Vector3d anchorPos, Vector3d attachPos) {
 		final PhysicsPipeline pipeline = SubLevelContainer.getContainer((ServerLevel) this.getLevel()).physicsSystem().getPipeline();
 		FixedConstraintHandle handle;
 		//special case if the plate is in the main level
@@ -189,18 +181,24 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 			if (container == null)
 				return null; //???
 			handle = pipeline.addConstraint(subLevel, container, new FixedConstraintConfiguration(
-					JOMLConversion.toJOML(this.getPlatePos().getCenter()),
-					JOMLConversion.toJOML(this.getBlockPos().getCenter()),
+					attachPos,
+					anchorPos,
 					container.logicalPose().orientation()
 					));
 		} else {
 			handle = pipeline.addConstraint(container, subLevel, new FixedConstraintConfiguration(
-					JOMLConversion.toJOML(this.getBlockPos().getCenter()),
-					JOMLConversion.toJOML(this.getPlatePos().getCenter()),
+					anchorPos,
+					attachPos,
 					container == null ? subLevel.logicalPose().orientation() : container.logicalPose().orientation().difference(subLevel.logicalPose().orientation())
 					));
 		}
 		return handle;
+	}
+
+	@Override
+	public void removeHandle() {
+		super.removeHandle();
+		removeLock();
 	}
 
 	public void removeLock() {
@@ -236,7 +234,7 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 		return currentAngle;
 	}
 
-
+	@Override
 	public void validateConstraintHandle() {
 		super.validateConstraintHandle();
 		if (this.lockHandle != null && !this.lockHandle.isValid()) {
@@ -245,39 +243,9 @@ public class BallJointBlockEntity extends BaseJointBlockEntity {
 	}
 
 	@Override
-	public void checkPersistence(UUID id) {
-		if (this.getPlatePos() != null && SimLevelUtil.isAreaActuallyLoaded(this.getLevel(), this.getPlatePos(), 1)) {
-			if (!this.getLevel().getBlockState(this.getPlatePos()).is(plateBlock)) {
-				return;
-			}
-		}
-
-		final SubLevel subLevel = SubLevelContainer.getContainer(this.getLevel()).getSubLevel(id);
-		this.validateConstraintHandle();
-
-		if (this.handle == null) {
-			this.reattachConstraint((ServerSubLevel) subLevel, true);
-		}
-		if (this.lockHandle == null && this.jointPlatePos != null && this.isAssembled() && this.isLocking()) {
-			this.lockHandle = addLockConstraint((ServerSubLevel) Sable.HELPER.getContaining(this), (ServerSubLevel) subLevel);
-		}
-	}
-
-	@Override
-	public void reattachConstraint(final @Nullable ServerSubLevel plateSubLevel, final boolean updatePlate) {
-		if (this.getPlatePos() != null) {
-			if (this.lockHandle != null) {
-				this.lockHandle.remove();
-			}
-		}
-		super.reattachConstraint(plateSubLevel, updatePlate);
-	}
-
-	@Override
-	public void assemble() {
-		super.assemble();
+	void attachAdditionalConstraints(@Nullable ServerSubLevel containingSubLevel, @Nullable ServerSubLevel plateSubLevel, Vector3d anchorPos, Vector3d attachPos) {
 		if (this.isLocking()) {
-			this.lockHandle = addLockConstraint((ServerSubLevel) Sable.HELPER.getContaining(this), (ServerSubLevel) this.getAttachedSubLevel());
+			this.lockHandle = this.addLockConstraint(containingSubLevel, plateSubLevel, anchorPos, attachPos);
 		}
 	}
 
