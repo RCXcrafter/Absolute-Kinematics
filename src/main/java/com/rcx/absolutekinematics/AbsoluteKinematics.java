@@ -14,6 +14,7 @@ import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 
+import dev.simulated_team.simulated.index.SimBlockMovementChecks;
 import dev.simulated_team.simulated.registrate.SimulatedRegistrate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -55,6 +56,9 @@ public class AbsoluteKinematics {
 		addToSection(KINEMATICS_SECTION, KinematicsRegistry.BALL_JOINT_ITEM);
 
 		addStressImpact(KinematicsRegistry.HINGE.get(), 4.0);
+
+		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.HINGE.get()));
+		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.BALL_JOINT.get()));
 	}
 
 	public void addStressImpact(Block block, double impact) {
