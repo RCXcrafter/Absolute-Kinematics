@@ -9,6 +9,7 @@ import com.rcx.absolutekinematics.datagen.KinematicsBlockTags;
 import com.rcx.absolutekinematics.datagen.KinematicsItemTags;
 import com.rcx.absolutekinematics.datagen.KinematicsLang;
 import com.rcx.absolutekinematics.datagen.KinematicsLootTables.KinematicsLootTableProvider;
+import com.rcx.absolutekinematics.misc.DirectionalAdditionalBlocks;
 import com.rcx.absolutekinematics.datagen.KinematicsRecipes;
 import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.foundation.item.KineticStats;
@@ -58,7 +59,9 @@ public class AbsoluteKinematics {
 		addStressImpact(KinematicsRegistry.HINGE.get(), 4.0);
 
 		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.HINGE.get()));
+		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.HINGE_LEAF.get()));
 		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.BALL_JOINT.get()));
+		SimBlockMovementChecks.registerAdditionalBlocks(new DirectionalAdditionalBlocks(KinematicsRegistry.BALL_JOINT_PLATE.get()));
 	}
 
 	public void addStressImpact(Block block, double impact) {
