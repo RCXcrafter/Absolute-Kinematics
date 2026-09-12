@@ -1,0 +1,13 @@
+{
+  "selector": "#absolute_kinematics:separating_joints",
+
+  "properties": {
+    "sable:mass": 1.0
+  },
+
+  "overrides": {
+    "assembled=true": {
+      "sable:mass": 0.75
+    }
+  }
+}
